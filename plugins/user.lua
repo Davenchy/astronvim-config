@@ -29,8 +29,13 @@ return {
         { name = "path" },
       },
       formatting = {
-        format = require("lspkind").cmp_format(),
-        mode = "text_symbol",
+        format = require("lspkind").cmp_format {
+          mode = "symbol",
+          before = function(_, vim_item)
+            vim_item.menu = " [" .. vim_item.kind .. "] "
+            return vim_item
+          end,
+        },
       },
     },
     dependencies = {
@@ -50,5 +55,10 @@ return {
       status_text = { enabled = true },
     },
     dependencies = { "antoinemadec/FixCursorHold.nvim" },
+  },
+  {
+    "mg979/vim-visual-multi",
+    config = true,
+    keys = { "<C-n>" },
   },
 }
