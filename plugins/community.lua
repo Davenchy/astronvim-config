@@ -6,7 +6,6 @@ return {
 
 	{ import = "astrocommunity.pack.dart" },
 	{ import = "astrocommunity.completion.tabnine-nvim" },
-	{ import = "astrocommunity.completion.codeium-vim" },
 	{ import = "astrocommunity.media.vim-wakatime" },
 	{ import = "astrocommunity.motion.hop-nvim" },
 	{ import = "astrocommunity.utility.transparent-nvim" },

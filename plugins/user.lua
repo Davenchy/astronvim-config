@@ -61,4 +61,26 @@ return {
     config = true,
     keys = { "<C-n>" },
   },
+  {
+    "Exafunction/codeium.vim",
+    event = "User AstroFile",
+    config = function()
+      vim.keymap.set("i", "<C-g>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
+
+      -- enable/disable codeium
+      vim.keymap.set("n", "<leader>;", function()
+        if vim.g.codeium_enabled == true then
+          vim.cmd "CodeiumDisable"
+        else
+          vim.cmd "CodeiumEnable"
+        end
+      end, { noremap = true, desc = "Toggle Codeium active" })
+    end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    config = true,
+    event = "User AstroFile",
+    cmd = { "TodoTrouble", "TodoTelescope", "TodoQuickFix", "TodoLocList" },
+  },
 }
