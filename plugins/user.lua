@@ -83,4 +83,29 @@ return {
     event = "User AstroFile",
     cmd = { "TodoTrouble", "TodoTelescope", "TodoQuickFix", "TodoLocList" },
   },
+  {
+    "akinsho/flutter-tools.nvim",
+    opts = {
+      statusline = {
+        app_version = true,
+        device = true,
+        project_config = true,
+      },
+      debugger = {
+        enabled = true,
+        run_via_dap = true,
+      },
+      fvm = true,
+      lsp = {
+        color = {
+          enabled = true,
+        },
+      },
+    },
+  },
+  {
+    "Nash0x7E2/awesome-flutter-snippets",
+    ft = "dart",
+    config = function() require("luasnip.loaders.from_vscode").lazy_load { include = { "dart" } } end,
+  },
 }
