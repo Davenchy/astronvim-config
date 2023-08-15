@@ -108,4 +108,9 @@ return {
     ft = "dart",
     config = function() require("luasnip.loaders.from_vscode").lazy_load { include = { "dart" } } end,
   },
+  {
+    "segeljakt/vim-silicon",
+    config = true,
+    cmd = { "Silicon" },
+  }
 }
