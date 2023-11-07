@@ -9,20 +9,20 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  {
-    "tzachar/cmp-tabnine",
-    config = true,
-    opts = {
-      show_prediction_strength = true,
-    },
-    build = "./install.sh",
-  },
+  -- {
+  --   "tzachar/cmp-tabnine",
+  --   config = true,
+  --   opts = {
+  --     show_prediction_strength = true,
+  --   },
+  --   build = "./install.sh",
+  -- },
   {
     "hrsh7th/nvim-cmp",
     opts = {
       sources = {
         { name = "nvim_lsp" },
-        { name = "cmp_tabnine" },
+        -- { name = "cmp_tabnine" },
         { name = "luasnip" },
         { name = "buffer" },
         { name = "nvim_lua" },
@@ -39,7 +39,7 @@ return {
       },
     },
     dependencies = {
-      { "tzachar/cmp-tabnine" },
+      -- { "tzachar/cmp-tabnine" },
       { "onsails/lspkind.nvim" },
     },
   },
@@ -112,5 +112,18 @@ return {
     "segeljakt/vim-silicon",
     config = true,
     cmd = { "Silicon" },
-  }
+  },
+  {
+    "jackMort/ChatGPT.nvim",
+    event = "VeryLazy",
+    config = true,
+    -- config = function()
+    --   require("chatgpt").setup()
+    -- end,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+  },
 }
