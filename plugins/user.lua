@@ -63,9 +63,42 @@ return {
   },
   {
     "Exafunction/codeium.vim",
-    event = "User AstroFile",
+    -- event = "User AstroFile",
+    event = "BufEnter",
     config = function()
-      vim.keymap.set("i", "<C-g>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
+      -- disable default mappings
+      vim.g.codeium_disable_bindings = 1
+      -- set codeium keymaps
+      vim.keymap.set(
+        "i",
+        "<M-g>",
+        function() return vim.fn["codeium#Accept"]() end,
+        { expr = true, desc = "Codeium Accept" }
+      )
+      vim.keymap.set(
+        "i",
+        "<M-c>",
+        function() return vim.fn["codeium#Complete"]() end,
+        { expr = true, desc = "Codeium Complete" }
+      )
+      vim.keymap.set(
+        "i",
+        "<M-x>",
+        function() return vim.fn["codeium#Clear"]() end,
+        { expr = true, desc = "Codeium Clear" }
+      )
+      vim.keymap.set(
+        "i",
+        "<M-[>",
+        function() return vim.fn["codeium#CycleCompletions"](1) end,
+        { expr = true, desc = "Codeium Cycle Completions next" }
+      )
+      vim.keymap.set(
+        "i",
+        "<M-]>",
+        function() return vim.fn["codeium#CycleCompletions"](-1) end,
+        { expr = true, desc = "Codeium Cycle Completions prev" }
+      )
 
       -- enable/disable codeium
       vim.keymap.set("n", "<leader>;", function()
