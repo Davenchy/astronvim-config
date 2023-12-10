@@ -20,6 +20,7 @@ return {
 		  "fsh",
 		  "sql",
 		  "bash",
+		  "rust",
     })
   end,
 }
