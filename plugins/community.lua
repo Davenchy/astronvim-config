@@ -14,6 +14,7 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.godot" },
   -- { import = "astrocommunity.completion.tabnine-nvim" },
   { import = "astrocommunity.media.vim-wakatime" },
 
