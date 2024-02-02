@@ -23,6 +23,28 @@ return {
     -- quick save
     ["<C-s>"] = { ":w<cr>", desc = "Save File" }, -- change description but the same command
     [";"] = { ":", desc = "enter command mode" },
+    -- replacec buffer close with <leader>x
+    maps.n["<leader>x"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" }
+    -- Setup ChatGPT
+    ["<leader>c"] = { name = "ChatGPT" },
+    ["<leader>cc"] = { "<cmd>ChatGPT<cr>", desc = "Chat" },
+    ["<leader>cg"] = { "<cmd>ChatGPTCompleteCode<cr>", desc = "Complete Code" },
+    ["<leader>ca"] = { "<cmd>ChatGPTActAs<cr>", desc = "Act as" },
+    ["<leader>ce"] = { "<cmd>ChatGPTEditWithInstructions<cr>", desc = "Instructions Edit" },
+    -- ChatGPT Run
+    ["<leader>cr"] = { name = "Run" },
+    ["<leader>crt"] = { "<cmd>ChatGPTRun translate<CR>", desc = "Translate" },
+    ["<leader>cra"] = { "<cmd>ChatGPTRun add_tests<CR>", desc = "Add Tests" },
+    ["<leader>crg"] = { "<cmd>ChatGPTRun grammar_correction<CR>", desc = "Grammar Correction" },
+    ["<leader>crk"] = { "<cmd>ChatGPTRun keywords<CR>", desc = "Keywords" },
+    ["<leader>crd"] = { "<cmd>ChatGPTRun docstring<CR>", desc = "Docstring" },
+    ["<leader>cro"] = { "<cmd>ChatGPTRun optimize_code<CR>", desc = "Optimize Code" },
+    ["<leader>crs"] = { "<cmd>ChatGPTRun summarize<CR>", desc = "Summarize" },
+    ["<leader>crf"] = { "<cmd>ChatGPTRun fix_bugs<CR>", desc = "Fix Bugs" },
+    ["<leader>crx"] = { "<cmd>ChatGPTRun explain_code<CR>", desc = "Explain Code" },
+    ["<leader>crr"] = { "<cmd>ChatGPTRun roxygen_edit<CR>", desc = "Roxygen Edit" },
+    ["<leader>crl"] = { "<cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
+    ["<leader>crc"] = { "<cmd>ChatGPTRun complete_code<CR>", desc = "Complete Code" },
   },
   i = {
     ["<C-s>"] = { "<esc>:w<cr>", desc = "Save File - InsertMode" },
@@ -32,5 +54,27 @@ return {
     -- ["<esc>"] = false,
     ["<C-l>"] = false,
     ["<esc><esc>"] = { "<C-\\><C-n>", desc = "Defocus terminal" },
+  },
+  v = {
+    -- Setup ChatGPT
+    ["<leader>c"] = { name = "ChatGPT" },
+    ["<leader>cc"] = { "<cmd>ChatGPT<cr>", desc = "Chat" },
+    ["<leader>cg"] = { "<cmd>ChatGPTCompleteCode<cr>", desc = "Complete Code" },
+    ["<leader>ca"] = { "<cmd>ChatGPTActAs<cr>", desc = "Act as" },
+    ["<leader>ce"] = { "<cmd>ChatGPTEditWithInstructions<cr>", desc = "Instructions Edit" },
+    -- ChatGPT Run
+    ["<leader>cr"] = { name = "Run" },
+    ["<leader>crt"] = { "<cmd>ChatGPTRun translate<CR>", desc = "Translate" },
+    ["<leader>cra"] = { "<cmd>ChatGPTRun add_tests<CR>", desc = "Add Tests" },
+    ["<leader>crg"] = { "<cmd>ChatGPTRun grammar_correction<CR>", desc = "Grammar Correction" },
+    ["<leader>crk"] = { "<cmd>ChatGPTRun keywords<CR>", desc = "Keywords" },
+    ["<leader>crd"] = { "<cmd>ChatGPTRun docstring<CR>", desc = "Docstring" },
+    ["<leader>cro"] = { "<cmd>ChatGPTRun optimize_code<CR>", desc = "Optimize Code" },
+    ["<leader>crs"] = { "<cmd>ChatGPTRun summarize<CR>", desc = "Summarize" },
+    ["<leader>crf"] = { "<cmd>ChatGPTRun fix_bugs<CR>", desc = "Fix Bugs" },
+    ["<leader>crx"] = { "<cmd>ChatGPTRun explain_code<CR>", desc = "Explain Code" },
+    ["<leader>crr"] = { "<cmd>ChatGPTRun roxygen_edit<CR>", desc = "Roxygen Edit" },
+    ["<leader>crl"] = { "<cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
+    ["<leader>crc"] = { "<cmd>ChatGPTRun complete_code<CR>", desc = "Complete Code" },
   },
 }
