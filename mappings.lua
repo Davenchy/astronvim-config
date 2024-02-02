@@ -17,6 +17,8 @@ return {
       end,
       desc = "Pick to close",
     },
+    -- Open Telescope as a commands palette
+    ["<C-p>"] = { "<cmd>Telescope<cr>", desc = "Commands Palette" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
