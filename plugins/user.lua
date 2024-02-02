@@ -47,7 +47,7 @@ return {
       )
 
       -- enable/disable codeium
-      vim.keymap.set("n", "<leader>;", function()
+      vim.keymap.set("n", "<leader>u;", function()
         if vim.g.codeium_enabled == true then
           vim.cmd "CodeiumDisable"
         else
