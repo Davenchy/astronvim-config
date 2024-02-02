@@ -19,6 +19,8 @@ return {
     },
     -- Open Telescope as a commands palette
     ["<C-p>"] = { "<cmd>Telescope<cr>", desc = "Commands Palette" },
+    -- AstroNVim Reload
+    ["<leader>pr"] = { "<cmd>AstroReload<cr>", desc = "Reload AstroNvim" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
