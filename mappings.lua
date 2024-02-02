@@ -24,7 +24,7 @@ return {
     ["<C-s>"] = { ":w<cr>", desc = "Save File" }, -- change description but the same command
     [";"] = { ":", desc = "enter command mode" },
     -- replacec buffer close with <leader>x
-    maps.n["<leader>x"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" }
+    ["<leader>x"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" },
     -- Setup ChatGPT
     ["<leader>c"] = { name = "ChatGPT" },
     ["<leader>cc"] = { "<cmd>ChatGPT<cr>", desc = "Chat" },
