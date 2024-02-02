@@ -33,6 +33,10 @@ return {
     ["<leader>xc"] = { "<cmd>ChatGPT<cr>", desc = "Chat" },
     ["<leader>xg"] = { "<cmd>ChatGPTCompleteCode<cr>", desc = "Complete Code" },
     ["<leader>xa"] = { "<cmd>ChatGPTActAs<cr>", desc = "Act as" },
+    -- Tools
+    ["<leader>z"] = { name = "Tools" },
+    ["<leader>zs"] = { "<cmd>!silicon -c %<cr>", desc = "Screen Code To Clipboard" },
+    ["<leader>zsf"] = { "<cmd>!silicon -o code.png %<cr>", desc = "Screen Code To File" },
   },
   i = {
     ["<C-s>"] = { "<esc>:w<cr>", desc = "Save File - InsertMode" },
@@ -59,5 +63,9 @@ return {
     ["<leader>xr"] = { "<cmd>ChatGPTRun roxygen_edit<CR>", desc = "Roxygen Edit" },
     ["<leader>xl"] = { "<cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
     ["<leader>xc"] = { "<cmd>ChatGPTRun complete_code<CR>", desc = "Complete Code" },
+    -- Tools
+    ["<leader>z"] = { name = "Tools" },
+    ["<leader>zs"] = { "\"+y:execute '!xclip -sel clip -o | silicon -l ' . &filetype . ' -c'<cr>", desc = "Generate Code Image" },
+    ["<leader>zsf"] = { "\"+y:execute '!xclip -sel clip -o | silicon -o code.png -l ' . &filetype<cr>", desc = "Generate Code Image" },
   },
 }
